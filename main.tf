@@ -36,7 +36,7 @@ resource "aws_codebuild_project" "website-codebuild" {
 }
 
 resource "aws_codepipeline" "website-pipeline" {
-  name = "terraform-pipeline"
+  name = "terraform-pipeline-2"
 
   role_arn = aws_iam_role.codepipeline_role.arn
 
