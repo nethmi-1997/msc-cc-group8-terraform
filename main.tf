@@ -50,7 +50,7 @@ resource "aws_codepipeline" "website-pipeline" {
       category = "Source"
       owner    = "ThirdParty"
       provider = "GitHub"
-      version  = "1"
+      version  = "2"
       configuration = {
         Owner          = "nethmi-1997"
         Repo           = "msc-cc-group8"

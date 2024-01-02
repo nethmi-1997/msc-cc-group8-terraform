@@ -5,7 +5,7 @@ variable "repo_name" {
 
 variable "codebuild_project_name" {
   type    = string
-  default = "demo-codebuild"
+  default = "demo-codebuild1"
 }
 
 variable "github_oauth_token" {
