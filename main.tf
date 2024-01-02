@@ -28,6 +28,9 @@ resource "aws_codebuild_project" "website-codebuild" {
             - terraform init
             - terraform apply --auto-approve
     EOF
+    configuration = {
+      OAuthToken = var.github_oauth_token 
+    }
   }
   artifacts {
     type = "NO_ARTIFACTS"
@@ -36,7 +39,7 @@ resource "aws_codebuild_project" "website-codebuild" {
 }
 
 resource "aws_codepipeline" "website-pipeline" {
-  name = "terraform-pipeline"
+  name = "terraform-pipeline-cc"
 
   role_arn = aws_iam_role.codepipeline_role.arn
 
