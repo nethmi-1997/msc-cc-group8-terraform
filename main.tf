@@ -8,7 +8,7 @@ resource "aws_codebuild_project" "website-codebuild" {
   }
   source {
     type            = "GITHUB"
-    location        = "https://github.com/DharshithaSrimal/aws-code-pipeline"
+    location        = "https://github.com/nethmi-1997/msc-cc-group8-terraform.git"
     git_clone_depth = 1
     buildspec       = <<-EOF
       version: 0.2
