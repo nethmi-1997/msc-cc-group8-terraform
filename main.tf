@@ -15,9 +15,6 @@ resource "aws_codebuild_project" "website-codebuild" {
       phases:
         build:
           commands:
-            - ls
-            - git clone https://github.com/nethmi-1997/msc-cc-group8-terraform.git
-            - ls
             - sudo yum update -y
             - sudo yum install -y unzip
             - curl -O https://releases.hashicorp.com/terraform/0.15.4/terraform_0.15.4_linux_amd64.zip
@@ -28,9 +25,6 @@ resource "aws_codebuild_project" "website-codebuild" {
             - terraform init
             - terraform apply --auto-approve
     EOF
-    configuration = {
-      OAuthToken = var.github_oauth_token 
-    }
   }
   artifacts {
     type = "NO_ARTIFACTS"
